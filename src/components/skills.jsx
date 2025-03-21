@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const skills = {
   fullstack: [
     { name: "MERN Stack", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -9,13 +11,10 @@ const skills = {
   languages: [
     { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-     { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
     { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-    // { name: "C#", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
-   ,
- 
-    
+    // { name: "C#", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" }
   ],
   frontend: [
     { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -32,7 +31,6 @@ const skills = {
     { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
     { name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
   ],
- 
   databases: [
     { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
     { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
@@ -52,13 +50,19 @@ const Skills = () => {
       {Object.entries(skills).map(([category, skillSet]) => (
         <div key={category}>
           <h2 className="text-xl font-bold capitalize mb-4">{category}</h2>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3   gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
             {skillSet.map((skill, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center bg-gray-100 rounded-lg p-4 shadow-md hover:shadow-lg transition-all cursor-pointer"
               >
-                <img src={skill.logo} alt={skill.name} className="w-16 h-16" />
+                <Image 
+                  src={skill.logo} 
+                  alt={skill.name} 
+                  width={64} 
+                  height={64} 
+                  className="w-16 h-16" 
+                />
                 <p className="mt-2 text-sm font-medium">{skill.name}</p>
               </div>
             ))}
