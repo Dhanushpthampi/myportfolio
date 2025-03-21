@@ -1,4 +1,5 @@
 "use client";
+{/* eslint-disable react/no-unescaped-entities */}
 import Brain from "@/components/brain";
 import Skills from "@/components/skills";
 import { motion, useInView, useScroll } from "framer-motion";
