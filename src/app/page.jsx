@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ContactPage from "./contact/page";
+import Brain from "@/components/brain";
 const Homepage = () => {
   return (
     <motion.div
@@ -13,18 +15,18 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-          <Image src="/hero.png" alt="" fill className="object-contain" />
+        <div className="h-2/3 lg:h-full lg:w-1/2 relative">
+          <Image src="/red.png" alt="" fill className="object-contain" />
         </div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-start justify-center">
           {/* TITLE */}
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hello, I&apos;m <span className="text-blue-500">Dhanush P Thampi</span>
+            Hello, I&apos;m <span className="text-red-400"><br className="hidden lg:block"/>Dhanush P</span>
           </h1>
           {/* DESC */}
           <p className="md:text-xl">
-            I am a <span className="text-blue-500 f-we"><b>FULLSTACK DEVELOPER</b></span> with a passion for building beautiful
+            I am a <span className="text-red-400 f-we"><b>FULLSTACK DEVELOPER</b></span> with a passion for building beautiful
             and functional web apps and websites.
           </p>
           {/* BUTTONS */}
@@ -40,8 +42,9 @@ const Homepage = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> 
     </motion.div>
+   
   );
 };
 

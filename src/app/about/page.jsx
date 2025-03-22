@@ -40,6 +40,7 @@ const AboutPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
+      
       {/* CONTAINER */}
       <div 
         className="overflow-x-hidden h-full overflow-scroll lg:flex scrollbar-hide" 
@@ -50,7 +51,7 @@ const AboutPage = () => {
         }}
       >
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-12 md:p-20  xl:p-28 2xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
@@ -65,7 +66,7 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Hi, I'm Dhanush P, a computer science engineer and artist passionate about web development, AI, and robotics. I specialize in full-stack development, combining creativity with technical expertise to build seamless digital experiences. Always exploring new ways to innovate, whether through technology or design.
+              Hi, I'm Dhanush P Thampi, a computer science engineer and artist passionate about web development, AI, and robotics. I specialize in full-stack development, combining creativity with technical expertise to build seamless digital experiences. Always exploring new ways to innovate, whether through technology or design.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -168,7 +169,7 @@ const AboutPage = () => {
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-55">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
@@ -202,7 +203,7 @@ const AboutPage = () => {
               
               
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-55">
                 {/* LEFT */}
                 <div className="w-1/3 "></div>
                 {/* CENTER */}
@@ -236,7 +237,7 @@ const AboutPage = () => {
               </div>
 
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-55">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
@@ -273,7 +274,7 @@ const AboutPage = () => {
                 
               </div>
                 {/* EXPERIENCE LIST ITEM */}
-                <div className="flex justify-between h-48">
+                <div className="flex justify-between h-55">
                 {/* LEFT */}
                 <div className="w-1/3 "></div>
                 {/* CENTER */}

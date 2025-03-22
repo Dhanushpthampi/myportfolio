@@ -72,7 +72,7 @@ const Navbar = () => {
         </Link>
       </div>
       {/* SOCIAL */}
-      <div className="flex gap-4 w-1/3">
+      <div className="flex gap-4 w-1/3 items-center">
         <Link
           href="https://github.com/Dhanushpthampi"
           target="_blank"

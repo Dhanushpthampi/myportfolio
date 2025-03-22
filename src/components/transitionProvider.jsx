@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "./navbar";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-
+// import Whatsup from "./whatsup"
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
 
@@ -66,6 +66,7 @@ const TransitionProvider = ({ children }) => {
         </div>
         <div className="h-[calc(100vh-6rem)]">{children}</div>
       </div>
+      {/* <Whatsup/> */}
     </AnimatePresence>
   );
 };
