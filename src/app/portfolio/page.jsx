@@ -46,7 +46,7 @@ const items = [
   {
     id: 4,
     color: "from-purple-300 to-red-300",
-    title: "Product showcase and landing page for client -bigscreensbengaluru",
+    title: "Product showcase-bigscreensbengaluru",
     desc: "developed product store and content management and athentication for the client bigscreensbengaluru.com and maintained and updated them",
     img: "/bigscreens.png",
     link: "https://www.bigscreensbengaluru.com/",
@@ -79,17 +79,17 @@ const PortfolioPage = () => {
               <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
               {items.map((item) => (
               <div
-                className={`min-h-screen w-screen flex items-start justify-start px-6 py-10 bg-gradient-to-r ${item.color}`}
+                className={`min-h-screen w-screen flex items-center justify-start px-6 py-10 bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-6 text-white md:gap-8 lg:gap-10">
+                <div className="flex flex-col gap-6 text-white md:gap-8  ">
                   {/* Title (Smaller) */}
-                  <h1 className="text-xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">
+                  <h1 className="text-xl font-bold md:text-3xl lg:text-4xl  ">
                     {item.title}
                   </h1>
 
                   {/* Image */}
-                  <div className="relative w-72 h-48 md:w-96 md:h-60 lg:w-[500px] lg:h-[320px] xl:w-[600px] xl:h-[380px]">
+                  <div className="relative w-72 h-48 md:w-96 md:h-60   ">
                     <Image
                       src={item.img}
                       alt={item.title}
