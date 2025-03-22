@@ -80,7 +80,7 @@ const ContactPage = () => {
               />
             </label>
 
-            <label className="flex flex-col gap-1">
+            {/* <label className="flex flex-col gap-1">
               <span className="font-medium">Title:</span>
               <input
                 name="title"
@@ -88,7 +88,7 @@ const ContactPage = () => {
                 className="w-full bg-transparent border-b-2 border-black outline-none px-2 py-1 text-base sm:text-lg"
                 required
               />
-            </label>
+            </label> */}
 
             <label className="flex flex-col gap-1">
               <span className="font-medium">Dear Dhanush,</span>
