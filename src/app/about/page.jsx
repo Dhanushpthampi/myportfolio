@@ -4,7 +4,7 @@ import Brain from "@/components/brain";
 import Skills from "@/components/skills";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -18,6 +18,21 @@ const AboutPage = () => {
   const experienceRef = useRef();
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
+  // Add this effect to create a style for hiding WebKit scrollbars
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <motion.div
       className="h-full "
@@ -26,7 +41,14 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="overflow-x-hidden h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div 
+        className="overflow-x-hidden h-full overflow-scroll lg:flex scrollbar-hide" 
+        ref={containerRef}
+        style={{
+          msOverflowStyle: "none", /* IE and Edge */
+          scrollbarWidth: "none", /* Firefox */
+        }}
+      >
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
@@ -56,9 +78,7 @@ const AboutPage = () => {
                 alt=""
                 width={300}
                 height={200}
-
               />
-
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
@@ -147,8 +167,6 @@ const AboutPage = () => {
               animate={isExperienceRefInView ? { x: "0" } : {}}
               className=""
             >
-
-
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
                 {/* LEFT */}
@@ -288,7 +306,6 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-
             </motion.div>
           </div>
         </div>

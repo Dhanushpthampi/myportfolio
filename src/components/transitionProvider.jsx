@@ -15,24 +15,51 @@ const TransitionProvider = ({ children }) => {
         className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100"
       >
         <motion.div
-          className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
+          className="transition-top h-screen w-screen fixed bg-black rounded-b-[100px]"
+          style={{ zIndex: 9998, position: "fixed" }}
           animate={{ height: "0vh" }}
           exit={{ height: "140vh" }}
           transition={{ duration: 0.25, ease: "easeOut" }}
+          onAnimationComplete={() => {
+            const element = document.querySelector(".transition-top");
+            if (element) {
+              element.style.zIndex = "-1";
+              element.style.pointerEvents = "none";
+              // Important: don't modify other styles
+            }
+          }}
         />
         <motion.div
-          className="fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default z-50 w-fit h-fit"
+          className="transition-text fixed m-auto top-0 bottom-0 left-0 right-0 text-white text-8xl cursor-default w-fit h-fit"
+          style={{ zIndex: 9999, position: "fixed" }}
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
+          onAnimationComplete={() => {
+            const element = document.querySelector(".transition-text");
+            if (element) {
+              element.style.zIndex = "-1";
+              element.style.pointerEvents = "none";
+              // Important: don't modify other styles
+            }
+          }}
         >
           {pathName.substring(1)}
         </motion.div>
         <motion.div
-          className="h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30"
+          className="transition-bottom h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0"
+          style={{ zIndex: 9997, position: "fixed" }}
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.25 } }}
+          onAnimationComplete={() => {
+            const element = document.querySelector(".transition-bottom");
+            if (element) {
+              element.style.zIndex = "-1";
+              element.style.pointerEvents = "none";
+              // Important: don't modify other styles
+            }
+          }}
         />
         <div className="h-24">
           <Navbar />
