@@ -139,7 +139,7 @@ const Homepage = () => {
               <h1 className="font-bold text-2xl" >BIOGRAPHY</h1>
               {/* BIOGRAPHY DESC */}
               <p className="text-lg">
-                Hi, I'm Dhanush P Thampi, a computer science engineer and artist passionate about web development, AI, and robotics. I specialize in full-stack development, combining creativity with technical expertise to build seamless digital experiences. Always exploring new ways to innovate, whether through technology or design.
+                Hi, I&apos;m Dhanush P Thampi, a computer science engineer and artist passionate about web development, AI, and robotics. I specialize in full-stack development, combining creativity with technical expertise to build seamless digital experiences. Always exploring new ways to innovate, whether through technology or design.
               </p>
               {/* BIOGRAPHY QUOTE */}
               <span className="italic">
