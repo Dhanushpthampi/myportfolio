@@ -76,6 +76,7 @@ const Homepage = () => {
                 I am a <span className="text-red-400 f-we"><b>FULLSTACK DEVELOPER</b></span> with a passion for building beautiful
                 and functional web apps and websites.
               </p>
+              {/* this is fucked up */}
               {/* BUTTONS */}
               <div className="w-full flex gap-4">
                 <Link href="/portfolio">
