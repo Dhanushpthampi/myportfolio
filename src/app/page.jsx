@@ -1,52 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useInView, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 import Brain from "@/components/brain";
 import Skills from "@/components/skills";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";  
+
 const Homepage = () => {
   const containerRef = useRef();
   const aboutSectionRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
-
-
-  
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
-  const text = "Say Hello";
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setError(false);
-    setSuccess(false);
-
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          form.current.reset();
-        },
-        (err) => {
-          console.error("EmailJS Error:", err);
-          setError(true);
-        }
-      );
-  }; 
-
-
 
   const skillRef = useRef();
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
@@ -156,7 +120,7 @@ const Homepage = () => {
    <br /><br /><br /><br /><br />
    <br /><br /><br /><br /><br />
    <br /><br /><br /><br /><br />
-   <br /><br /><br /><br /><br /><br /><br /><br />
+   <br /><br /><br /><br /><br /><br /><br />
    </div>
           {/* ABOUT SECTION */}
           <div className="p-4 sm:p-12 md:p-20 xl:p-28 2xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 " data-section="about" ref={aboutSectionRef}>
@@ -428,12 +392,7 @@ const Homepage = () => {
             <Brain scrollYProgress={scrollYProgress} />
           </motion.div>
         )}
-
-
-
-        
       </div>
-      
     </motion.div>
   );
 };
