@@ -22,36 +22,54 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "Web Development Startup - dreamdvpr",
-    desc: "developed the company websites and all the clients webiste and maintained and updated them",
-    img: "/dreamdvpr.png",
-    link: "https://dreamdvpr.com",
+    title: "Carnivors - Ecommerce Meat Store",
+    desc: "an ecommerce application that helps buy and sell all kinds of meat and related products",
+    img: "/carnivors.png",
+    link: "https://carnivors.onrender.com/login",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
+    title: "Brainstorm App",
+    desc: "an application for noting down ideas and visualizing them using directional graphs and more",
+    img: "/brainstorm.png",
+    link: "https://glowing-dango-302f2c.netlify.app/",
+  },
+  {
+    id: 3,
+    color: "from-violet-300 to-purple-300",
     title: "Full stack website for a client - NOTARC",
     desc: "developed the website withand content management and athentication for the client NOTARC and maintained and updated them",
     img: "/notarc.png",
     link: "https://notarc.in",
   },
   {
-    id: 3,
-    color: "from-violet-300 to-purple-300",
+    id: 4,
+    color: "from-purple-300 to-red-300",
     title: "Landing Page and Blog - dyuthidentalcare.com",
     desc: "developed the website with blog and content management and athentication for the client dyuthidentalcare.com and maintained and updated them",
     img: "/dyuthidental.png",
     link: "https://www.dyuthidentalcare.com/",
   },
   {
-    id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "Product showcase-bigscreensbengaluru",
+    id: 5,
+    color: "from-red-300 to-blue-300",
+    title: "Product showcase - bigscreensbengaluru",
     desc: "developed product store and content management and athentication for the client bigscreensbengaluru.com and maintained and updated them",
     img: "/bigscreens.png",
-    link: "https://www.bigscreensbengaluru.com/",
+    link: "https://bigscreensbengaluru.netlify.app",
+  },
+  {
+    id: 6,
+    color: "from-blue-300 to-violet-300",
+    title: "Web Development Startup - dreamdvpr",
+    desc: "developed the company websites and all the clients webiste and maintained and updated them",
+    img: "/dreamdvpr.png",
+    link: "https://dreamdvpr.netlify.app/",
   },
 ];
+
+
 
 const PortfolioPage = () => {
   const ref = useRef();
